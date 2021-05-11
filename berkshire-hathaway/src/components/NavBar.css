@@ -1,0 +1,84 @@
+#Navbar {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #333; */
+    /* padding: 0 40px 0 40px; */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    /* Full width */
+    width: 100%;
+    /* width: 1440px; */
+    transition: top 0.3s;
+    align-items: center;
+    margin: 0 auto 0 auto;
+}
+
+#NavImage {
+    width: 170px;
+    /* height: 150px; */
+    padding-left: 25px;
+}
+
+#NavItemsContainer {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    /* width: 100%; */
+}
+
+#NavItem {
+    padding: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+#NavItem a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+#NavItem a:hover {
+    /* background-color: #ddd; */
+    border-bottom: 1px solid #808080;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 74px;
+    right: -67px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#NavItem .dropdown-content a {
+    color: black;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+#NavItem .dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* top: 50px; */
+    width: 100%;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */

@@ -1,8 +1,19 @@
 import React, { Component } from 'react'
+// import Portal from './PortalContainer'
 
 import './Login.css';
 
 export default class Login extends Component {
+
+    state = {
+        // loggedin: null
+    }
+
+    loadPortal = () => {
+        console.log('portal is loading')
+    }
+
+    // TODO: Ask Marc and Zach about React Router Redirect
     render() {
         return (
             <div className="Login">
@@ -17,6 +28,7 @@ export default class Login extends Component {
                     href="https://reactjs.org"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={this.loadPortal}
                     >
                     This is an a tag.
                     </a>
