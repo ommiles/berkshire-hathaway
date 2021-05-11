@@ -33,7 +33,9 @@ const NavBar = () => {
         <div id='Navbar'>
 
             <div>
-                <img src={Logo} alt='Berkshire Hathaway Logo' id='NavImage' ></img>
+                <a style={{cursor: 'pointer'}} href='/'>
+                    <img src={Logo} alt='Berkshire Hathaway Logo' id='NavImage' ></img>
+                </a>
             </div>
 
             <div id='NavItemsContainer'>
