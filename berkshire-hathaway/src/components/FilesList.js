@@ -1,7 +1,7 @@
 import React from 'react'
 import File from './File'
 
-export default function filesList({ filteredFiles }) {
+export default function filesList({ filteredFiles, addBookmark }) {
     return (
         <table className=''>
         <tbody>
@@ -16,7 +16,7 @@ export default function filesList({ filteredFiles }) {
               <h3 className=''>URL</h3>
             </th>
           </tr>
-          {filteredFiles.map(file => <File key={file.id} file={file} /> )}
+          {filteredFiles.map(file => <File key={file.id} file={file} addBookmark={addBookmark} /> )}
         </tbody>
       </table>
     )

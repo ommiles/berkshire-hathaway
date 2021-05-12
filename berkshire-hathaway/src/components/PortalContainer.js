@@ -6,7 +6,8 @@ export default class Portal extends Component {
 
     state = {
         files: [],
-        filteredFiles: []
+        filteredFiles: [],
+        bookmarkedFiles: []
     }
 
     componentDidMount() {
@@ -27,6 +28,12 @@ export default class Portal extends Component {
         })
     }
 
+    addBookmark = (e, file) => {
+        // TODO: grab specific fileObj and add to array
+        // .fetch('')
+        console.log('addBookmark is running')
+    }
+
     render() {
         return (
             <div>
@@ -36,7 +43,7 @@ export default class Portal extends Component {
                     {/* <Search search={search} /> */}
                     {/* <AddTransactionForm updateTransactions={updateTransactions} /> */}
                     {/* <Sort sortFunc={sortFunc} /> */}
-                    <FilesList filteredFiles={this.state.filteredFiles} />
+                    <FilesList filteredFiles={this.state.filteredFiles} addBookmark={this.addBookmark} />
                 </div>
             </div>
         )
