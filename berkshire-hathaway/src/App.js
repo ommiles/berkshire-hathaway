@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter as Route, withRouter } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import Home from './components/Home';
@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 import Portal from './components/PortalContainer';
 import './css/app.css'
 
-export default class App extends Component {
+class App extends Component {
 
   state = {
     user: {}
@@ -39,23 +39,27 @@ export default class App extends Component {
   }
 
   userLogin = (user) => {
-    // fetch
-    // find
-    // set state new object
     fetch('http://localhost:6001/users')
       .then(res => res.json())
       .then(data => this.setState({
         user: data.find(element => element.username === user)
-      }))
+      }, this.loadPortal))
     console.log(user)
     console.log('userLogin is firing.')
   }
 
-  loadPortal = (user) => {
+  loadPortal = () => {
+    // falsy values are undefined
     // TODO: find user in users array in db
     // TODO: Retrieve their bookmarked files
     // TODO: Set state for portal container to user
     // TODO: Redirect to Portal
+    if (this.state.user) {
+      // console.log(this.state.user)
+      this.props.history.push(`/portal/${this.state.user.username}`)
+    } else {
+      this.props.history.push('/investors')
+    }
   }
 
   // ! Login Component & Props are here
@@ -64,7 +68,7 @@ export default class App extends Component {
   render() {
     // TODO: Add a 404 page??
       return (
-        <Router>
+        // <Router>
           <div>
             <NavBar />
             <main>
@@ -74,13 +78,14 @@ export default class App extends Component {
               <Route path='/sustainability' component={Sustainability} />
               <Route path='/investors' component={this.loginComponent} />
               <Route path='/news' component={News} />
-              <Route exact path='/portal/:username' render={(props) => props.match.params.username === 'Miles' ? <Portal/> : <Redirect to='/investors' />} />
+              {/* <Route exact path='/portal/:username' render={(props) => props.match.params.username === 'Miles' ? <Portal/> : <Redirect to='/investors' />} /> */}
+              <Route exact path='/portal/:username' render={(props) => <Portal/>} />
             </main>
             <Footer />
           </div>
-        </Router>
+        // </Router>
       )
   }
 }
 
-// export default App
+export default withRouter(App)
