@@ -3,6 +3,7 @@ ul {
     padding-left: 0;
 }
 footer {
+    margin: 0 !important;
     background-color: #555;
     color: #bbb;
     line-height: 1.5;
@@ -44,5 +45,7 @@ a:hover {
 }
 
 .container {
-    flex: 1;    /* same as flex-grow: 1; */
+    /* same as flex-grow: 1; */
+    flex: 1;
+    /* max-width: 2000px !important; */
 }

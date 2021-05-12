@@ -28,9 +28,9 @@ const NavBar = () => {
   // }
 
   return (
-    <div id="Navbar" className="flex justify-between items-center center">
-      <div>
-        <a style={{ cursor: "pointer" }} href="/">
+    <div id="Navbar" className="flex justify-between items-center center h4 ph4">
+      <div className='pa3'>
+        <a style={{  }} href="/" className=''>
           <img src={Logo} alt="Berkshire Hathaway Logo" id="NavImage"></img>
         </a>
       </div>

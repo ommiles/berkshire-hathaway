@@ -1,76 +1,79 @@
 {
-    "corporate-governance-files": [
-        {
-        "id": 1,
-        "year": 2002,
-        "source": "Berkshire Hathaway",
-        "filename": "Corporate Governance Guidelines",
-        "url": "https://www.berkshirehathaway.com/govern/corpgov.pdf"
-        },
-        {
-        "id": 2,
-        "year": 1994,
-        "source": "Berkshire Hathaway",
-        "filename": "Code of Business Conduct and Ethics",
-        "url": "https://www.berkshirehathaway.com/govern/ethics.pdf"
-        },
-        {
-        "id": 3,
-        "year": 2014,
-        "source": "Berkshire Hathaway",
-        "filename": "Insider Trading Policy",
-        "url": "https://www.berkshirehathaway.com/govern/inside.pdf"
-        },
-        {
-        "id": 4,
-        "year": 2008,
-        "source": "Berkshire Hathaway",
-        "filename": "Audit Committee Charter",
-        "url": "https://www.berkshirehathaway.com/govern/audit.pdf"
-        },
-        {
-        "id": 5,
-        "year": 2017,
-        "source": "Berkshire Hathaway",
-        "filename": "Governance, Compensation and Nominating Committee Charter",
-        "url": "https://www.berkshirehathaway.com/govern/comp.pdf"
-        },
-        {
-        "id": 6,
-        "year": 2021,
-        "source": "SEC.gov",
-        "filename": "Section 16 Reports of Directors, Officers and Principal Stockholders",
-        "url": "http://www.sec.gov/cgi-bin/browse-edgar?company=&CIK=1067983&owner=only&action=getcompany"
-        },
-        {
-        "id": 7,
-        "year": 2000,
-        "source": "Berkshire Hathaway",
-        "filename": "Conflict Minerals Policy Information",
-        "url": "https://www.berkshirehathaway.com/govern/Conflict%20Minerals%20Policy.pdf"
-        },
-        {
-        "id": 8,
-        "year": 2005,
-        "source": "Berkshire Hathaway",
-        "filename": "Conflict Minerals Report",
-        "url": "https://www.berkshirehathaway.com/govern/2019ConflictMineralsReport.pdf"
-        },
-        {
-        "id": 9,
-        "year": 1997,
-        "source": "Berkshire Hathaway",
-        "filename": "Wesco Financial Corp - Form 8937 Report on Basis of Securities",
-        "url": "https://www.berkshirehathaway.com/govern/Wesco%20Form%208937%20Report%20of%20Organizational%20Actions%20Affecting%20Basis%20in%20Securitites.pdf"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "username": "",
-            "bookmarks" : [
-                {}
-            ]
-        }
-    ]
+  "corporate-governance-files": [
+    {
+      "id": 1,
+      "year": 2002,
+      "source": "Berkshire Hathaway",
+      "filename": "Corporate Governance Guidelines",
+      "url": "https://www.berkshirehathaway.com/govern/corpgov.pdf"
+    },
+    {
+      "id": 2,
+      "year": 1994,
+      "source": "Berkshire Hathaway",
+      "filename": "Code of Business Conduct and Ethics",
+      "url": "https://www.berkshirehathaway.com/govern/ethics.pdf"
+    },
+    {
+      "id": 3,
+      "year": 2014,
+      "source": "Berkshire Hathaway",
+      "filename": "Insider Trading Policy",
+      "url": "https://www.berkshirehathaway.com/govern/inside.pdf"
+    },
+    {
+      "id": 4,
+      "year": 2008,
+      "source": "Berkshire Hathaway",
+      "filename": "Audit Committee Charter",
+      "url": "https://www.berkshirehathaway.com/govern/audit.pdf"
+    },
+    {
+      "id": 5,
+      "year": 2017,
+      "source": "Berkshire Hathaway",
+      "filename": "Governance, Compensation and Nominating Committee Charter",
+      "url": "https://www.berkshirehathaway.com/govern/comp.pdf"
+    },
+    {
+      "id": 6,
+      "year": 2021,
+      "source": "SEC.gov",
+      "filename": "Section 16 Reports of Directors, Officers and Principal Stockholders",
+      "url": "http://www.sec.gov/cgi-bin/browse-edgar?company=&CIK=1067983&owner=only&action=getcompany"
+    },
+    {
+      "id": 7,
+      "year": 2000,
+      "source": "Berkshire Hathaway",
+      "filename": "Conflict Minerals Policy Information",
+      "url": "https://www.berkshirehathaway.com/govern/Conflict%20Minerals%20Policy.pdf"
+    },
+    {
+      "id": 8,
+      "year": 2005,
+      "source": "Berkshire Hathaway",
+      "filename": "Conflict Minerals Report",
+      "url": "https://www.berkshirehathaway.com/govern/2019ConflictMineralsReport.pdf"
+    },
+    {
+      "id": 9,
+      "year": 1997,
+      "source": "Berkshire Hathaway",
+      "filename": "Wesco Financial Corp - Form 8937 Report on Basis of Securities",
+      "url": "https://www.berkshirehathaway.com/govern/Wesco%20Form%208937%20Report%20of%20Organizational%20Actions%20Affecting%20Basis%20in%20Securitites.pdf"
+    }
+  ],
+  "users": [
+    {
+      "username": "Test",
+      "bookmarks": [],
+      "id": 1
+    },
+    {
+      "username": "Ashley",
+      "bookmarks": [],
+      "id": 2
+    }
+  ]
 }
