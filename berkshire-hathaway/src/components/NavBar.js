@@ -6,15 +6,6 @@ import "./NavBar.css";
 // import Logo from '../Berkshire-Hathaway-Logo.png'
 import Logo from "../berkshire-hathaway-inc-logo-1.png";
 
-// const link = {
-//     width: '100px',
-//     padding: '12px',
-//     margin: '0 6px 6px',
-//     background: 'blue',
-//     textDecoration: 'none',
-//     color: 'white'
-// }
-
 const NavBar = () => {
   // var prevScrollpos = window.pageYOffset;
 
@@ -46,7 +37,6 @@ const NavBar = () => {
         <NavLink className="pa3 link" to="/sustainability" exact>
           Sustainability
         </NavLink>
-        {/* <NavLink className='pa3 link' to='/corporate-governance' exact >Corporate Governance</NavLink> */}
         <NavLink className="pa3 link" to="/investors" exact>
           Investors
         </NavLink>

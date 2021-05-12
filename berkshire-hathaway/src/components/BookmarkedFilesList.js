@@ -1,7 +1,7 @@
 import React from 'react'
 import File from './File'
 
-export default function FilesList ({ filteredFiles, addBookmark }) {
+export default function BookmarkedFilesList({ bookmarkedFiles, removeBookmark }) {
     return (
         <table className=''>
         <tbody>
@@ -16,7 +16,7 @@ export default function FilesList ({ filteredFiles, addBookmark }) {
               <h3 className=''>URL</h3>
             </th>
           </tr>
-          {filteredFiles.map(file => <File key={file.id} file={file} addBookmark={addBookmark} /> )}
+          {bookmarkedFiles.map(file => <File key={file.id} file={file} removeBookmark={removeBookmark} /> )}
         </tbody>
       </table>
     )

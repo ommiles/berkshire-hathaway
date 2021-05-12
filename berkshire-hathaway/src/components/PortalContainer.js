@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import BookmarkedFilesList from './BookmarkedFilesList'
 import FilesList from './FilesList'
 import Search from './Search'
 
 export default class Portal extends Component {
 
+    // TODO: this.state.user populates the appropriate bookmarkedFiles array
     state = {
+        user: '',
         files: [],
         filteredFiles: [],
         bookmarkedFiles: []
@@ -29,15 +32,16 @@ export default class Portal extends Component {
     }
 
     addBookmark = (e, file) => {
-        // TODO: grab specific fileObj and add to array
+        // TODO: grab specific fileObj and add to user array
         // .fetch('')
         console.log('addBookmark is running')
     }
 
     render() {
+        // TODO: Conditionally render BookmarkedFilesList if this.state.bookmarkedFiles.length truthy
         return (
             <div>
-                <h1>Welcome, John</h1>
+                <h1>Welcome, Miles</h1>
                 <Search search={this.searchFunc} />
                 <div style={{display: 'flex'}}>
                     {/* <Search search={search} /> */}
