@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+// import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import NavBar from './components/NavBar';
 import Home from './components/Home';
@@ -11,6 +14,8 @@ import News from './components/News';
 import Footer from './components/Footer';
 import Portal from './components/PortalContainer';
 import './css/app.css'
+
+library.add(faSearch)
 
 class App extends Component {
 
@@ -34,7 +39,7 @@ class App extends Component {
       .then(res => res.json())
       .then(data => this.setState({
         user: data
-      }))
+      }, this.loadPortal))
       // .then(data => console.log(data))
   }
 
@@ -44,16 +49,9 @@ class App extends Component {
       .then(data => this.setState({
         user: data.find(element => element.username === user)
       }, this.loadPortal))
-    // console.log(user)
-    // console.log('userLogin is firing.')
   }
 
   loadPortal = () => {
-    // falsy values are undefined
-    // TODO: find user in users array in db
-    // TODO: Retrieve their bookmarked files
-    // TODO: Set state for portal container to user
-    // TODO: Redirect to Portal
     if (this.state.user) {
       // console.log(this.state.user)
       this.props.history.push(`/portal/${this.state.user.username}`)

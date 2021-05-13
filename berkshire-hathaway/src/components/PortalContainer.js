@@ -5,7 +5,6 @@ import Search from './Search'
 
 export default class Portal extends Component {
 
-    // TODO: this.state.user populates the appropriate bookmarkedFiles array
     state = {
         user: this.props.loggedInUser,
         files: [],
@@ -32,36 +31,49 @@ export default class Portal extends Component {
     }
 
     addBookmark = (e, file) => {
-        // TODO: grab specific fileObj and add to user array
+        if (!this.state.user.bookmarks.some(bookmark => bookmark.id === file.id)) {
+            let configObj = {
+                method: 'PATCH',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                }, body: JSON.stringify({ bookmarks: [...this.state.user.bookmarks, file] })
+            }
+            fetch(`http://localhost:6001/users/${this.state.user.id}`, configObj)
+                .then(res => res.json())
+                .then(data => this.setState({
+                    user: data
+                }))
+        }
+    }
+
+    removeBookmark = (e, file) => {
         let configObj = {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
-            }, body: JSON.stringify({bookmarks: [...this.props.loggedInUser.bookmarks, file]})
+            }, body: JSON.stringify({ bookmarks: this.state.user.bookmarks.filter(bookmark => bookmark.id !== file.id) })
         }
         fetch(`http://localhost:6001/users/${this.state.user.id}`, configObj)
             .then(res => res.json())
-            // TODO: next, we update the user obj to include more arrays
-            .then(this.render())
-        console.log('addBookmark is running.')
-        // console.log(this.state.user.bookmarks)
-        // console.log(this.props.loggedInUser)
-        // console.log(this.state.user)
-    }
-
-    removeBookmark = (e) => {
-        console.log('removeBookmark is firing.')
+            .then(data => this.setState({ 
+                user: data
+            }))
     }
 
     render() {
-        // TODO: Conditionally render BookmarkedFilesList if this.state.bookmarkedFiles.length truthy
-        // console.log(this.state.user)
         return (
             <div>
-                <h1>Welcome, {this.props.loggedInUser.username}</h1>
+                <div>
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-circle" class="svg-inline--fa fa-user-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path></svg>
+                <div>
+                    <h1>Welcome, {this.props.loggedInUser.username}</h1>
+                    <h3>testemail@foo.com</h3>
+                </div>
+                </div>
                 <Search search={this.searchFunc} />
-                <div style={{display: 'flex'}}>
+                <div className='flex'>
                     {/* <Search search={search} /> */}
                     {/* <AddTransactionForm updateTransactions={updateTransactions} /> */}
                     {/* <Sort sortFunc={sortFunc} /> */}
