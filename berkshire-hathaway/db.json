@@ -67,7 +67,15 @@
   "users": [
     {
       "username": "Brad",
-      "bookmarks": [],
+      "bookmarks": [
+        {
+          "id": 10,
+          "year": 2000,
+          "source": "Berkshire Hathaway",
+          "filename": "Conflict Minerals Policy Information",
+          "url": "https://www.berkshirehathaway.com/govern/Conflict%20Minerals%20Policy.pdf"
+        }
+      ],
       "id": 1
     },
     {

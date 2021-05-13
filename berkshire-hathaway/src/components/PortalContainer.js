@@ -7,10 +7,10 @@ export default class Portal extends Component {
 
     // TODO: this.state.user populates the appropriate bookmarkedFiles array
     state = {
-        user: '',
+        user: this.props.loggedInUser,
         files: [],
         filteredFiles: [],
-        bookmarkedFiles: []
+        // bookmarkedFiles: []
     }
 
     componentDidMount() {
@@ -33,21 +33,41 @@ export default class Portal extends Component {
 
     addBookmark = (e, file) => {
         // TODO: grab specific fileObj and add to user array
-        // .fetch('')
-        console.log('addBookmark is running')
+        let configObj = {
+            method: 'PATCH',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }, body: JSON.stringify({bookmarks: [...this.props.loggedInUser.bookmarks, file]})
+        }
+        fetch(`http://localhost:6001/users/${this.state.user.id}`, configObj)
+            .then(res => res.json())
+            // TODO: next, we update the user obj to include more arrays
+            .then(this.render())
+        console.log('addBookmark is running.')
+        // console.log(this.state.user.bookmarks)
+        // console.log(this.props.loggedInUser)
+        // console.log(this.state.user)
+    }
+
+    removeBookmark = (e) => {
+        console.log('removeBookmark is firing.')
     }
 
     render() {
         // TODO: Conditionally render BookmarkedFilesList if this.state.bookmarkedFiles.length truthy
+        // console.log(this.state.user)
         return (
             <div>
-                <h1>Welcome, Miles</h1>
+                <h1>Welcome, {this.props.loggedInUser.username}</h1>
                 <Search search={this.searchFunc} />
                 <div style={{display: 'flex'}}>
                     {/* <Search search={search} /> */}
                     {/* <AddTransactionForm updateTransactions={updateTransactions} /> */}
                     {/* <Sort sortFunc={sortFunc} /> */}
                     <FilesList filteredFiles={this.state.filteredFiles} addBookmark={this.addBookmark} />
+                    {/* {this.props.loggedInUser.bookmarks.length ? <BookmarkedFilesList bookmarkedFiles={this.props.loggedInUser.bookmarks} removeBookmark={this.removeBookmark} /> : null} */}
+                    {this.state.user.bookmarks.length ? <BookmarkedFilesList bookmarkedFiles={this.state.user.bookmarks} removeBookmark={this.removeBookmark} /> : null}
                 </div>
             </div>
         )

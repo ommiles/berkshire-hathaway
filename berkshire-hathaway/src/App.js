@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Route, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import Home from './components/Home';
@@ -44,8 +44,8 @@ class App extends Component {
       .then(data => this.setState({
         user: data.find(element => element.username === user)
       }, this.loadPortal))
-    console.log(user)
-    console.log('userLogin is firing.')
+    // console.log(user)
+    // console.log('userLogin is firing.')
   }
 
   loadPortal = () => {
@@ -69,7 +69,7 @@ class App extends Component {
     // TODO: Add a 404 page??
       return (
         // <Router>
-          <div>
+          <>
             <NavBar />
             <main>
               <Route exact path='/' component={Home} />
@@ -79,10 +79,10 @@ class App extends Component {
               <Route path='/investors' component={this.loginComponent} />
               <Route path='/news' component={News} />
               {/* <Route exact path='/portal/:username' render={(props) => props.match.params.username === 'Miles' ? <Portal/> : <Redirect to='/investors' />} /> */}
-              <Route exact path='/portal/:username' render={(props) => <Portal/>} />
+              <Route exact path='/portal/:username' render={(props) => <Portal loggedInUser={this.state.user} />} />
             </main>
             <Footer />
-          </div>
+          </>
         // </Router>
       )
   }

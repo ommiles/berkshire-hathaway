@@ -28,7 +28,7 @@ const NavBar = () => {
 
       <div className="">
         {/* <NavLink className='pa3 link' to='/' exact >Home</NavLink> */}
-        <NavLink className="pa3 link link:link" to="" exact>
+        <NavLink className="pa3 link" to="/holdings" exact>
           Holdings
         </NavLink>
         <NavLink className="pa3 link" to="/news" exact>

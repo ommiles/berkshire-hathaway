@@ -17,7 +17,7 @@ export default function Home() {
         id='HomeContainer'
         >
             {/* <h1>This is the Home component.</h1> */}
-            <div className='relative'>
+            <div className=''>
                 <img src={Hero} alt='Warren Buffet Portrait' className='vh-75 w-100' />
                 {/* <div className='absolute hero-box'></div> */}
             </div>
