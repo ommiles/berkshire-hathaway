@@ -85,5 +85,13 @@
       ],
       "id": 1
     }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "year": 2021,
+      "videoname": "Video One",
+      "url": "https://www.youtube.com/"
+    }
   ]
 }
