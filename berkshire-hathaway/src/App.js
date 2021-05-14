@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
-import { library } from '@fortawesome/fontawesome-svg-core';
+// import { library } from '@fortawesome/fontawesome-svg-core';
 // import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+// import { faSearch, faClock } from '@fortawesome/free-solid-svg-icons';
 
 import NavBar from './components/NavBar';
 import Home from './components/Home';
@@ -14,8 +14,6 @@ import News from './components/News';
 import Footer from './components/Footer';
 import Portal from './components/PortalContainer';
 import './css/app.css'
-
-library.add(faSearch)
 
 class App extends Component {
 

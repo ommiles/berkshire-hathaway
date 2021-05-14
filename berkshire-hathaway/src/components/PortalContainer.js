@@ -1,9 +1,16 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faBookmark, faFilm } from '@fortawesome/free-solid-svg-icons';
 import BookmarkedFilesList from "./BookmarkedFilesList";
-import Videos from "./Videos";
+import VideoContainer from "./VideoContainer";
 import FilesList from "./FilesList";
 import Search from "./Search";
-import './PortalContainer.css'
+import Sort from "./Sort";
+import './PortalContainer.css';
+
+const clock = <FontAwesomeIcon icon={faClock} />
+const bkmk = <FontAwesomeIcon icon={faBookmark} />
+const film = <FontAwesomeIcon icon={faFilm} />
 
 export default class Portal extends Component {
   state = {
@@ -11,6 +18,9 @@ export default class Portal extends Component {
     userView: "uploads",
     files: [],
     filteredFiles: [],
+    toggleUploads: false,
+    toggleBookmarks: false,
+    toggleVideos: false,
   };
 
   componentDidMount() {
@@ -19,12 +29,32 @@ export default class Portal extends Component {
       .then((files) =>
         this.setState({
           files: files,
-          filteredFiles: files,
+          filteredFiles: files.sort((a, b) => a.filename < b.filename ? -1 : 1 )
         })
       );
   }
 
+  // toggleView = (newView) => {
+  //   this.setState({
+  //     userView: newView,
+  //   });
+  // };
+
   toggleView = (newView) => {
+    switch (newView) {
+      case "uploads":
+        this.setState({
+          toggleUploads: !this.state.toggleUploads
+        })
+      case "bookmarks":
+        this.setState({
+          toggleBookmarks: !this.state.toggleBookmarks
+        })
+      case "videos":
+        this.setState({
+          toggleVideos: !this.state.toggleVideos
+        })
+    }
     this.setState({
       userView: newView,
     });
@@ -35,12 +65,15 @@ export default class Portal extends Component {
       case "uploads":
         return (
           <div>
-            {" "}
-            <Search search={this.searchFunc} />{" "}
+            <div className="flex justify-between items-center">
+              <Search search={this.searchFunc} />
+              <Sort sortFunc={this.sortFunc} />
+            </div>
+            <div className='bb b--light-silver mt3' ></div>
             <FilesList
               filteredFiles={this.state.filteredFiles}
               addBookmark={this.addBookmark}
-            />{" "}
+            />
           </div>
         );
       case "bookmarks":
@@ -51,7 +84,7 @@ export default class Portal extends Component {
           />
         );
       case "videos":
-        return <Videos />;
+        return <VideoContainer />;
       default:
         console.log("This ain't it.");
     }
@@ -68,6 +101,23 @@ export default class Portal extends Component {
     this.setState({
       filteredFiles: filteredAllFiles,
     });
+  };
+
+  sortFunc = (val) => {
+    switch (val) {
+      case "year":
+        this.setState({
+          filteredFiles: this.state.filteredFiles.sort((a, b) =>
+            b.year - a.year
+          ),
+        });
+        break;
+      case "alphabetical":
+        this.setState({
+          filteredFiles: this.state.filteredFiles.sort((a, b) => a.filename < b.filename ? -1 : 1 ),
+        });
+        break;
+    }
   };
 
   addBookmark = (e, file) => {
@@ -117,56 +167,64 @@ export default class Portal extends Component {
   };
 
     render() {
+
+      // const white = 'background-color: '
+
         return (
             <div>
-                <div className="user-container center justify-center flex mt4 mb7">
-                    <div className="flex flex-column ma4 justify-between ba b--light-gray br4 bg-light-gray">
+                <div className="center justify-center flex mt5 mb7">
+                    <div className="user-container flex flex-column ma2 justify-between ba b--light-gray br4 bg-light-gray" style={{minHeight: '440px'}}>
                         <div className="flex-column">
-                            <h1 className="pa3">Welcome, {this.props.loggedInUser.username}</h1>
-                            <div className="flex items-center">
-                                <svg
-                                aria-hidden="true"
-                                focusable="false"
-                                data-prefix="fas"
-                                data-icon="user-circle"
-                                className="svg-inline--fa fa-user-circle fa-w-16 pa3"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 496 512"
-                                >
-                                <path
-                                fill="currentColor"
-                                d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"
-                                ></path>
+                          <div className="flex items-center justify-around mb4">
+                            <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fas"
+                            data-icon="user-circle"
+                            width="5px"
+                            height="5px"
+                            className="svg-inline--fa fa-user-circle fa-w-16 pv3"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 5 150"
+                            >
+                            <path
+                            fill="currentColor"
+                            d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"
+                            ></path>
                             </svg>
-                            <h3 className="ma0 pa3">testemail@foo.com</h3>
+                            <div className="flex flex-column justify-start">
+                              <h1 className="pt3 pb0 mb0">Welcome,</h1>
+                              <h1 className="pa0 ma0">{this.props.loggedInUser.username}</h1>
+                              <h4 className="ma0 center pr3 pl1">testemail@foo.com</h4>
+                            </div>
                         </div>
-                            <div className="menu-container pv2">
-                                <div className="pv1 ph3 mv2">
+                            <div className="menu-container pv2 b">
+                                <div className="pv1 ph3 mv1 ml3 mr5 ba b--light-gray br4" style={{backgroundImage: this.state.toggleUploads ? 'white' : 'lightgray'}}>
                                     <a
-                                    className=""
+                                    className="pointer"
                                     onClick={(e) => this.toggleView(e.target.id)}
                                     id="uploads"
                                     >
-                                    Uploaded Files
+                                    {clock} Uploaded Files
                                     </a>
                                 </div>
-                                <div className="pv1 ph3 mv2">
+                                <div className="pv1 ph3 mv1 ml3 mr5 ba b--light-gray br4">
                                     <a
-                                    className=""
+                                    className="pointer"
                                     onClick={(e) => this.toggleView(e.target.id)}
                                     id="bookmarks"
                                     >
-                                    Bookmarked Files
+                                    {bkmk} Bookmarked Files
                                     </a>
                                 </div>
-                                <div className="pv1 ph3 mv2">
+                                <div className="pv1 ph3 mv1 ml3 mr5 ba b--light-gray br4">
                                     <a
-                                    className=""
+                                    className="pointer"
                                     onClick={(e) => this.toggleView(e.target.id)}
                                     id="videos"
                                     >
-                                    Videos
+                                    {film} Videos
                                     </a>
                                 </div>
                             </div>
@@ -174,12 +232,12 @@ export default class Portal extends Component {
 
                         <div className="flex flex-column justify-between">
                             <div className="flex justify-between support-container">
-                                <div className="pa3">Request a New Document</div>
-                                <div className="pa3">Help</div>
+                                <p className="pa3">Request a New Document</p>
+                                <p className="pa3">Help</p>
                             </div>
                         </div>
                     </div>
-                <div className="ma4 file-container">{this.getView()}</div>
+                <div className="ma2 file-container">{this.getView()}</div>
             </div>
         </div>
     );

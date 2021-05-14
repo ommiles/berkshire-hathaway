@@ -76,14 +76,39 @@
           "url": "https://www.berkshirehathaway.com/govern/inside.pdf"
         },
         {
-          "id": 4,
-          "year": 2008,
+          "id": 2,
+          "year": 1994,
           "source": "Berkshire Hathaway",
-          "filename": "Audit Committee Charter",
-          "url": "https://www.berkshirehathaway.com/govern/audit.pdf"
+          "filename": "Code of Business Conduct and Ethics",
+          "url": "https://www.berkshirehathaway.com/govern/ethics.pdf"
+        },
+        {
+          "id": 5,
+          "year": 2017,
+          "source": "Berkshire Hathaway",
+          "filename": "Governance, Compensation and Nominating Committee Charter",
+          "url": "https://www.berkshirehathaway.com/govern/comp.pdf"
         }
       ],
       "id": 1
+    },
+    {
+      "username": "Teresa",
+      "bookmarks": [
+        {
+          "id": 6,
+          "year": 2021,
+          "source": "SEC.gov",
+          "filename": "Section 16 Reports of Directors, Officers and Principal Stockholders",
+          "url": "http://www.sec.gov/cgi-bin/browse-edgar?company=&CIK=1067983&owner=only&action=getcompany"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "username": "Ready",
+      "bookmarks": [],
+      "id": 3
     }
   ],
   "videos": [
@@ -91,6 +116,7 @@
       "id": 1,
       "year": 2021,
       "videoname": "Video One",
+      "source": "YouTube",
       "url": "https://www.youtube.com/"
     }
   ]

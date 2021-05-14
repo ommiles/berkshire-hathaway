@@ -3,10 +3,10 @@ import React from 'react';
 const File = ({ file, addBookmark, removeBookmark, id }) => {
         return (
             <tr>
-                <td>{file.year}</td>
-                <td>{file.filename}</td>
-                <td><a href={file.url}>{file.source}</a></td>
-                <td> {id === 'new' ? <button id={file.id} onClick={(e) => addBookmark(e, file)} > Bookmark File</button> : <button id={file.id} onClick={(e) => removeBookmark(e, file)} >Remove Bookmark</button> }  </td>
+                <td className='ph3 pv2' >{file.year}</td>
+                <td className='ph3 pv2' >{file.filename}</td>
+                <td className='ph3 pv2' ><a className='link' href={file.url}>{file.source}</a></td>
+                <td className='ph3 pv2' > {id === 'new' ? <button id={file.id} onClick={(e) => addBookmark(e, file)} > Bookmark File</button> : <button id={file.id} onClick={(e) => removeBookmark(e, file)} >Remove Bookmark</button> }  </td>
             </tr>
         )
 }
