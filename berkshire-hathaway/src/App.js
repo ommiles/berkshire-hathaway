@@ -4,7 +4,7 @@ import { Route, withRouter } from 'react-router-dom';
 // import { fab } from '@fortawesome/free-brands-svg-icons';
 // import { faSearch, faClock } from '@fortawesome/free-solid-svg-icons';
 
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import Holdings from './components/Holdings';
@@ -66,7 +66,7 @@ class App extends Component {
       return (
         // <Router>
           <>
-            <NavBar />
+            {/* <NavBar /> */}
             <main>
               <Route exact path='/' component={Home} />
               <Route path='/about' component={About} />

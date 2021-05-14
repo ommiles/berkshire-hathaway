@@ -1,3 +1,18 @@
+/* .container {
+    min-width: 1440px;
+} */
+
+/* main {
+    max-width: 1440px;
+     margin-right: auto;
+    margin-left: auto;
+} */
+
+/* body {
+    margin-right: auto;
+    margin-left: auto;
+} */
+
 .login-container {
     width: 1000px;
     min-height: 700px;

@@ -1,7 +1,26 @@
-/* #HomeContainer img {
-    object-fit: cover;
-    float: left;
+#HomeContainer {
+    /* max-width: 1440px; */
+}
+
+/* #NavImage {
+    width: 250px;
+    cursor: pointer;
 } */
+
+.hero-container {
+    width: 100vw;
+}
+
+.hero-container img {
+    /* object-fit: none;
+    object-position: -90% 10%; */
+    /* width: 1440px; */
+    width: 100vw;
+}
+
+.opacity {
+    /* opacity: .05; */
+}
 
 .hero-box {
     width: 20rem;

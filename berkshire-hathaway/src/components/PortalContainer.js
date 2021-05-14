@@ -6,6 +6,7 @@ import VideoContainer from "./VideoContainer";
 import FilesList from "./FilesList";
 import Search from "./Search";
 import Sort from "./Sort";
+import NavBar from './NavBar'
 import './PortalContainer.css';
 
 const clock = <FontAwesomeIcon icon={faClock} />
@@ -171,7 +172,8 @@ export default class Portal extends Component {
       // const white = 'background-color: '
 
         return (
-            <div>
+            <div className="portal-container center">
+              <NavBar />
                 <div className="center justify-center flex mt5 mb7">
                     <div className="user-container flex flex-column ma2 justify-between ba b--light-gray br4 bg-light-gray" style={{minHeight: '440px'}}>
                         <div className="flex-column">
