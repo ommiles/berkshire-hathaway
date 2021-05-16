@@ -2,21 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import "./NavBar.css";
-// import Logo from '../berkshire-hathawaylogo.png'
-// import Logo from '../Berkshire-Hathaway-Logo.png'
-import Logo from "../berkshire-hathaway-inc-logo-1.png";
+import Logo from "../images/berkshire-hathaway-inc-logo-1.png";
 
 const NavBar = () => {
-  // var prevScrollpos = window.pageYOffset;
-
-  // window.onscroll = function() {
-  //     var currentScrollPos = window.pageYOffset;
-  //     if (prevScrollpos > currentScrollPos) {
-  //         document.getElementById('Navbar').style.top = '0';
-  //     } else {
-  //         document.getElementById('Navbar').style.top = '-200px';
-  //     } prevScrollpos = currentScrollPos;
-  // }
 
   return (
     <div id="Navbar" className="flex justify-between items-center center h4 ph4">
@@ -27,7 +15,6 @@ const NavBar = () => {
       </div>
 
       <div className="">
-        {/* <NavLink className='pa3 link' to='/' exact >Home</NavLink> */}
         <NavLink className="pa3 link" to="/holdings" exact>
           Holdings
         </NavLink>

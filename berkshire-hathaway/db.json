@@ -69,25 +69,11 @@
       "username": "Brad",
       "bookmarks": [
         {
-          "id": 3,
-          "year": 2014,
-          "source": "Berkshire Hathaway",
-          "filename": "Insider Trading Policy",
-          "url": "https://www.berkshirehathaway.com/govern/inside.pdf"
-        },
-        {
-          "id": 2,
-          "year": 1994,
-          "source": "Berkshire Hathaway",
-          "filename": "Code of Business Conduct and Ethics",
-          "url": "https://www.berkshirehathaway.com/govern/ethics.pdf"
-        },
-        {
-          "id": 5,
-          "year": 2017,
-          "source": "Berkshire Hathaway",
-          "filename": "Governance, Compensation and Nominating Committee Charter",
-          "url": "https://www.berkshirehathaway.com/govern/comp.pdf"
+          "id": 6,
+          "year": 2021,
+          "source": "SEC.gov",
+          "filename": "Section 16 Reports of Directors, Officers and Principal Stockholders",
+          "url": "http://www.sec.gov/cgi-bin/browse-edgar?company=&CIK=1067983&owner=only&action=getcompany"
         }
       ],
       "id": 1
@@ -109,15 +95,356 @@
       "username": "Ready",
       "bookmarks": [],
       "id": 3
+    },
+    {
+      "username": "Kaz",
+      "bookmarks": [
+        {
+          "id": 2,
+          "year": 1994,
+          "source": "Berkshire Hathaway",
+          "filename": "Code of Business Conduct and Ethics",
+          "url": "https://www.berkshirehathaway.com/govern/ethics.pdf"
+        },
+        {
+          "id": 1,
+          "year": 2002,
+          "source": "Berkshire Hathaway",
+          "filename": "Corporate Governance Guidelines",
+          "url": "https://www.berkshirehathaway.com/govern/corpgov.pdf"
+        },
+        {
+          "id": 3,
+          "year": 2014,
+          "source": "Berkshire Hathaway",
+          "filename": "Insider Trading Policy",
+          "url": "https://www.berkshirehathaway.com/govern/inside.pdf"
+        }
+      ],
+      "id": 4
     }
   ],
   "videos": [
     {
       "id": 1,
       "year": 2021,
-      "videoname": "Video One",
+      "videoname": "Yahoo Finance webcast of the May 1, 2021 Annual Meeting.",
       "source": "YouTube",
-      "url": "https://www.youtube.com/"
+      "url": "https://finance.yahoo.com/brklivestream"
+    }
+  ],
+  "holdings": [
+    {
+      "holdingname": "Acme Brick Company",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C4E0BAQHlCVbKjG_eug/company-logo_200_200/0/1552424685641?e=2159024400&v=beta&t=XeNWF8p1kI8afourQqAU0XoM_OWLkJExOfhsCI0d-Kk",
+      "url":"http://www.brick.com/"
+    },
+    {
+      "holdingname": "Ben Bridge Jeweler",
+      "holdingimage": "https://assets.simon.com/tenantlogos/561.png",
+      "url":"https://www.benbridge.com/"
+    },
+    {
+      "holdingname": "Benjamin Moore & Co.",
+      "holdingimage": "https://yt3.ggpht.com/ytc/AAUvwngqQiSmXMlp0C0k4tvvmWM7Gui0CnEYl4sM7DXViQ=s900-c-k-c0x00ffffff-no-rj",
+      "url":"http://www.benjaminmoore.com/"
+    },
+    {
+      "holdingname": "Berkshire Hathaway Automotive",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C4E0BAQF3vfsddCOvDA/company-logo_200_200/0/1521584784021?e=2159024400&v=beta&t=xvJHcMVeP7krCHAMFi18cZupftV7n7X_kdw_xiFBoz0",
+      "url":"http://www.berkshirehathawayautomotive.com/"
+    },
+    {
+      "holdingname": "Berkshire Hathaway Direct Insurance Company (THREE)",
+      "holdingimage": "https://www.threeinsurance.com/media/1997/three-apple-touch-icon-180-x-180.png",
+      "url":"https://www.threeinsure.com/"
+    },
+    {
+      "holdingname": "Berkshire Hathaway Energy Company",
+      "holdingimage": "data:image/png;base64,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",
+      "url":"https://www.brkenergy.com/"
+    },
+    {
+      "holdingname": "Berkshire Hathaway GUARD Insurance Companies",
+      "holdingimage": "https://simpleinsuranceco.com/wp-content/uploads/2020/06/simple-insurance-carriers__0008_berkshire-hathaway-guard-insurance.png",
+      "url":"https://www.guard.com/"
+    },
+    {
+      "holdingname": "Berkshire Hathaway Homestate Companies",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C560BAQEjvjEsMZICrQ/company-logo_200_200/0/1606847224072?e=2159024400&v=beta&t=T2TglBigGODO0pi55sfvlYx6PqB5ueAzErJpR7QRPWQ",
+      "url":"https://www.bhhc.com/"
+    },
+    {
+      "holdingname": "Berkshire Hathaway Specialty Insurance",
+      "holdingimage": "https://s.yimg.com/uu/api/res/1.2/MFYgnrRlT0JVsjTjQrONrQ--~B/aD0zNzI7dz00ODA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/business-wire.com/49aa9be08bbb96e2800fb1ab80105a38",
+      "url":"https://bhspecialty.com/"
+    },
+    {
+      "holdingname": "biBERK Business Insurance",
+      "holdingimage": "https://www.bbb.org/ProfileImages/4d041fe8-bfc7-4ebb-b579-4332802a5309.png",
+      "url":"https://www.biberk.com/"
+    },
+    {
+      "holdingname": "BoatU.S.",
+      "holdingimage": "https://patch.com/img/biz/sites/default/files/users/22957257/20170823165555/boatu_s_logo_tapemeasure.jpg",
+      "url":"https://www.boatus.org/"
+    },
+    {
+      "holdingname": "Borsheims Fine Jewelry",
+      "holdingimage": "https://bloximages.newyork1.vip.townnews.com/omaha.com/content/tncms/assets/v3/business/c/33/c33052f0-1aa2-5ae5-af99-c6b08e16a9fd/5c7ec8e8112c2.image.jpg",
+      "url":"https://www.borsheims.com/"
+    },
+    {
+      "holdingname": "Brooks",
+      "holdingimage": "https://tricycleandrun.files.wordpress.com/2015/01/brooks-running-logo.jpg?w=250",
+      "url":"https://www.brooksrunning.com/"
+    },
+    {
+      "holdingname": "BNSF",
+      "holdingimage": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/102011/bnsf.ai_.png?itok=Xvk0hYpi",
+      "url":"http://www.bnsf.com/"
+    },
+    {
+      "holdingname": "Business Wire",
+      "holdingimage": "http://www.businesswire.com/images/bwlogo_square.png",
+      "url":"https://www.businesswire.com/"
+    },
+    {
+      "holdingname": "Central States Indemnity Company",
+      "holdingimage": "https://www.expertinsurancereviews.com/wp-content/uploads/2017/01/central-states-indemnity-300.png",
+      "url":"https://www.ohioinsureplan.com/central-states-indemnity-medicare-supplement-insurance-quotes/"
+    },
+    {
+      "holdingname": "Charter Brokerage",
+      "holdingimage": "https://www.audaxprivatedebt.com/system/uploads/fae/image/asset/496/charter_brokerage_logo.jpg",
+      "url":"https://charterbrokerage.net/"
+    },
+    {
+      "holdingname": "Clayton Homes",
+      "holdingimage": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/052011/clayton-homes.png?itok=RNA1o56u",
+      "url":"https://www.claytonhomes.com/"
+    },
+    {
+      "holdingname": "CORT Business Services",
+      "holdingimage": "data:image/png;base64,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",
+      "url":"https://www.cort.com/"
+    },
+    {
+      "holdingname": "CTB Inc.",
+      "holdingimage": "https://www.ctbinc.com/wp-content/uploads/2019/02/cropped-CTB-favicon.png",
+      "url":"https://www.ctbinc.com/"
+    },
+    {
+      "holdingname": "Duracell",
+      "holdingimage": "https://i.pinimg.com/originals/48/c5/b9/48c5b9fa3cb6e995ef3f5db4bd54974d.png",
+      "url":"https://www.duracell.com/en-us/"
+    },
+    {
+      "holdingname": "Fechheimer Brothers Company",
+      "holdingimage": "https://media.glassdoor.com/sqll/24770/fechheimer-brothers-squarelogo-1526976823965.png",
+      "url":"https://www.fechheimer.com/"
+    },
+    {
+      "holdingname": "FlightSafety",
+      "holdingimage": "https://pbs.twimg.com/profile_images/1105944509102374914/eJbr5zzt_400x400.png",
+      "url":"https://www.flightsafety.com/"
+    },
+    {
+      "holdingname": "Forest River",
+      "holdingimage": "https://dealers.focus-static.com/uploads/2389/mans_brands/forest-river_2080.jpg",
+      "url":"https://www.forestriverinc.com/"
+    },
+    {
+      "holdingname": "Fruit of the Loom Companies",
+      "holdingimage": "https://pbs.twimg.com/profile_images/913489265941557248/ZRkjBQQz_400x400.jpg",
+      "url":"https://www.fotlinc.com/"
+    },
+    {
+      "holdingname": "Garan Incorporated",
+      "holdingimage": "https://files.startupranking.com/startup/thumb/409732_6a5517b655f3255163db20c7e373b1c54cddeb3c_garan_m.png",
+      "url":"http://www.garanimals.com/"
+    },
+    {
+      "holdingname": "Gateway Underwriters Agency",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C560BAQGmk8uav-ewfw/company-logo_200_200/0/1519907436231?e=2159024400&v=beta&t=iZdEMDUj7fbCIqJ2l_Youre69EL4VQUtR7NkryfVxC4",
+      "url":"https://www.gua-stl.com/"
+    },
+    {
+      "holdingname": "GEICO Auto Insurance",
+      "holdingimage": "https://www.lambdachi.org/wp-content/uploads/2020/08/Geico.png",
+      "url":"https://www.geico.com"
+    },
+    {
+      "holdingname": "General Re",
+      "holdingimage": "https://uploads1.craft.co/uploads/company/logo/13820xx/1382093/normal_be892c856b511d7f.jpg",
+      "url":"https://www.genre.com/"
+    },
+    {
+      "holdingname": "Helzberg Diamonds",
+      "holdingimage": "https://www.shoppinggatewaymall.com/wp-content/uploads/sites/235/2020/09/helzbergdiamonds.png",
+      "url":"https://www.helzberg.com/"
+    },
+    {
+      "holdingname": "H.H. Brown Shoe Group",
+      "holdingimage": "https://media.glassdoor.com/sqll/18568/h-h-brown-shoe-squarelogo-1429708210631.png",
+      "url":"http://www.hhbrown.com/"
+    },
+    {
+      "holdingname": "HomeServices of America",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C560BAQF4J3mCvAnVhw/company-logo_200_200/0/1519867175257?e=2159024400&v=beta&t=Hyy1WdkZeWzDwA2VRI4HiCfJbu2uJb-55VmvoPGnZuM",
+      "url":"https://www.homeservices.com/"
+    },
+    {
+      "holdingname": "International Dairy Queen, Inc.",
+      "holdingimage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Dairy_Queen_logo.svg/1200px-Dairy_Queen_logo.svg.png",
+      "url":"https://www.dairyqueen.com"
+    },
+    {
+      "holdingname": "IMC International Metalworking Companies",
+      "holdingimage": "https://www.imc-companies.com/wp-content/uploads/Other/imc_1-300x269.png",
+      "url":"http://www.imc-companies.com/"
+    },
+    {
+      "holdingname": "Johns Manville",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C4E0BAQE37BCxTh5tnQ/company-logo_200_200/0/1546270743885?e=2159024400&v=beta&t=v1Rr3Hc9txWzqld99UuJ6wbR2gEyq_c-B9BpHOPHF9E",
+      "url":"https://www.jm.com/"
+    },
+    {
+      "holdingname": "Jordan's Furniture",
+      "holdingimage": "https://toppng.com/uploads/preview/jordans-furniture-jordans-furniture-logo-11563231990drzthoig1p.png",
+      "url":"https://www.jordans.com/"
+    },
+    {
+      "holdingname": "Justin Brands",
+      "holdingimage": "https://cdn.saffire.com/images.ashx?t=ig&rid=FortWorthStockShow&i=Justin_2000px_for_Web(1).jpg",
+      "url":"https://justinbrands.com/"
+    },
+    {
+      "holdingname": "Kraft Heinz",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C4E0BAQFkrQNAThhYKA/company-logo_200_200/0/1596651241548?e=2159024400&v=beta&t=3KHy-vnl5T_Jl8f5J3uCaAWfAaXj7R-RZn3KGvEWSDQ",
+      "url":"https://www.kraftheinzcompany.com/"
+    },
+    {
+      "holdingname": "Larson-Juhl",
+      "holdingimage": "https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/5cb30325960e8e01f77d9e927bd73e1f",
+      "url":"https://www.larsonjuhl.com/"
+    },
+    {
+      "holdingname": "LiquidPower Specialty Products Inc. (LSPI)",
+      "holdingimage": "data:image/png;base64,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",
+      "url":"https://www.liquidpower.com/"
+    },
+    {
+      "holdingname": "Louis - Motorcycle & Leisure",
+      "holdingimage": "https://lh3.googleusercontent.com/proxy/DTpkKZnpbT6c9Jcx8rnf65hzt0Rgtl0i_HIOFtmmtcaQEc8H1yEmpfqsm2UyWrPvec_vg9WITkR8jHE6nJll3LA2X9M5bEOUtiLFiwT1NopTcNg7toSYmk-2JA",
+      "url":"https://www.louis.eu"
+    },
+    {
+      "holdingname": "Lubrizol Corporation",
+      "holdingimage": "https://iconape.com/wp-content/files/wy/263541/svg/263541.svg",
+      "url":"https://www.lubrizol.com/"
+    },
+    {
+      "holdingname": "Marmon Holdings, Inc.",
+      "holdingimage": "https://ewi.org/eto/wp-content/uploads/2018/01/Marmon-logo.jpg",
+      "url":"https://www.marmon.com/"
+    },
+    {
+      "holdingname": "McLane Company",
+      "holdingimage": "https://pbs.twimg.com/profile_images/1063217295185534976/F1QQlKQd.jpg",
+      "url":"https://www.mclaneco.com/"
+    },
+    {
+      "holdingname": "MedPro Group",
+      "holdingimage": "https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/bb1fc079d72924d7f4368d7ae3f44dbd",
+      "url":"https://www.medpro.com/"
+    },
+    {
+      "holdingname": "MiTek Inc.",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C4E0BAQGzSyGYWJ0uNQ/company-logo_200_200/0/1584965865083?e=2159024400&v=beta&t=zexRmjBosu6siSskozghNC2Zn-3-0py53F5IRFUBZcw",
+      "url":"https://www.mii.com/"
+    },
+    {
+      "holdingname": "MLMIC Insurance Company",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C4D0BAQEqiN33ZfRe8w/company-logo_200_200/0/1538438358283?e=2159024400&v=beta&t=08_RKpNldsQT3ylyKKM-YwmNPGD7OzKTgyLc6QUD_nI",
+      "url":"https://www.mlmic.com/"
+    },
+    {
+      "holdingname": "National Indemnity Company",
+      "holdingimage": "https://res-4.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1463220587/loz6igmfzyno7hlkagk1.png",
+      "url":"https://www.nationalindemnity.com/"
+    },
+    {
+      "holdingname": "Nebraska Furniture Mart",
+      "holdingimage": "https://media.glassdoor.com/sqll/20545/nebraska-furniture-mart-squarelogo-1501106563190.png",
+      "url":"https://www.nfm.com/"
+    },
+    {
+      "holdingname": "NetJets®",
+      "holdingimage": "https://pbs.twimg.com/profile_images/694584852553674752/RBkOQBhV_400x400.jpg",
+      "url":"https://www.netjets.com/en-us/"
+    },
+    {
+      "holdingname": "Oriental Trading Company",
+      "holdingimage": "https://media.glassdoor.com/sqll/24383/oriental-trading-company-squarelogo-1491314030162.png",
+      "url":"https://www.orientaltrading.com/"
+    },
+    {
+      "holdingname": "Pampered Chef®",
+      "holdingimage": "data:image/png;base64,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",
+      "url":"https://www.pamperedchef.com/"
+    },
+    {
+      "holdingname": "Precision Castparts Corp.",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C4E0BAQFtXf4ClMR4lg/company-logo_200_200/0/1519856891054?e=2159024400&v=beta&t=jLIi28WoaYRTp_0GMR2i8Kvd2VxBoa3brfEmmoBXLuI",
+      "url":"https://www.precast.com/"
+    },
+    {
+      "holdingname": "RC Willey Home Furnishings",
+      "holdingimage": "https://s3.amazonaws.com/hotrodtimephotos/media/com_easysocial/photos/2999/110428/08a045426bad2007207fe4ba1d2235b6_large.png",
+      "url":"https://www.rcwilley.com/"
+    },
+    {
+      "holdingname": "Richline Group",
+      "holdingimage": "https://media.glassdoor.com/sqll/13421/richline-squarelogo-1429696464271.png",
+      "url":"https://www.richlinegroup.com/"
+    },
+    {
+      "holdingname": "Scott Fetzer Companies",
+      "holdingimage": "https://media.glassdoor.com/sqll/19748/scott-fetzer-squarelogo-1582534240468.png",
+      "url":"https://scottfetzer.com/"
+    },
+    {
+      "holdingname": "See's Candies",
+      "holdingimage": "https://s3-us-west-1.amazonaws.com/mcv-resources/logos/sees-candies.png",
+      "url":"https://www.sees.com/"
+    },
+    {
+      "holdingname": "Shaw Industries",
+      "holdingimage": "https://shawfloors.scene7.com/is/image/ShawFloors/shaw-logo-bw",
+      "url":"https://shawfloors.com/"
+    },
+    {
+      "holdingname": "Star Furniture",
+      "holdingimage": "https://pbs.twimg.com/profile_images/943615916171915264/Shfpg68q_400x400.jpg",
+      "url":"https://astarfurn.com/"
+    },
+    {
+      "holdingname": "TTI, Inc.",
+      "holdingimage": "https://pbs.twimg.com/profile_images/1211706079769436160/oq6JgxgL_400x400.png",
+      "url":"https://www.tti.com/content/ttiinc/en.html"
+    },
+    {
+      "holdingname": "United States Liability Insurance Group",
+      "holdingimage": "https://www.libertychoiceinsurance.com/wp-content/uploads/2020/04/Carrier-USLI.png",
+      "url":"https://www.usli.com/"
+    },
+    {
+      "holdingname": "XTRA Corporation",
+      "holdingimage": "https://media-exp1.licdn.com/dms/image/C4E0BAQHI8tsSpZj7FQ/company-logo_200_200/0/1571843352200?e=2159024400&v=beta&t=vcKvjRIQ-kfbbLDPdB-K24PyHSQt3Q-0-PtR60ceYLU",
+      "url":"https://www.xtralease.com/"
     }
   ]
-}
+}  
+
+

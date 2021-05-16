@@ -1,15 +1,8 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
-// import Logo from "../berkshire-hathaway-inc-logo-1.png";
-import Logo from "../berkshire-hathawaylogo copy.png";
+
 import NavBar from './NavBar'
-// import Hero from '../warren-buffett_SOURCE_wallstreetplaybook.jpeg'
-// import Hero from '../Warren-Buffett-investment-advice.jpeg'
-// import Hero from '../Warren-Buffetts-Berkshire-Hathaway-announced-more-than-35-billion-of-investments-last-quarter.jpeg'
-import Hero from '../68eba76008ec3558666815038d1e60eb.jpeg'
-// import Hero from '../740-warren-buffett-02.imgcache.reva8fc8cd50adcdab8f9649872e92cc161.jpg'
-// import Hero from '../merlin_154369971_de0df103-464f-4831-8e13-e5bbb4fa8096-superJumbo.jpeg'
-// import Hero from '../Warren-Buffett.jpeg'
+import Hero from '../images/68eba76008ec3558666815038d1e60eb.jpeg'
 import './Home.css'
 
 export default function Home() {
@@ -34,11 +27,6 @@ export default function Home() {
                         Investors
                         </NavLink>
                     </div>
-                    {/* <div className='pa3'>
-                        <a style={{  }} href="/" className=''>
-                        <img src={Logo} alt="Berkshire Hathaway Logo" id="NavImage"></img>
-                        </a>
-                    </div> */}
                     <div className="">
                         <h1 className="f-headline top-1 bottom-1 absolute mt6 mr5 mb5 ml4 white">Berkshire <br/> Hathaway Inc.</h1>
                     </div>

@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { fab } from '@fortawesome/free-brands-svg-icons';
-// import { faSearch, faClock } from '@fortawesome/free-solid-svg-icons';
 
-// import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
-import Holdings from './components/Holdings';
+import HoldingsContainer from './components/HoldingsContainer';
 import Sustainability from './components/Sustainability';
 import Login from './components/Login';
 import News from './components/News';
@@ -38,7 +34,6 @@ class App extends Component {
       .then(data => this.setState({
         user: data
       }, this.loadPortal))
-      // .then(data => console.log(data))
   }
 
   userLogin = (user) => {
@@ -58,28 +53,23 @@ class App extends Component {
     }
   }
 
-  // ! Login Component & Props are here
   loginComponent = () => <Login userCreate={this.userCreate} userLogin={this.userLogin} />
 
   render() {
     // TODO: Add a 404 page??
       return (
-        // <Router>
           <>
-            {/* <NavBar /> */}
             <main>
               <Route exact path='/' component={Home} />
               <Route path='/about' component={About} />
-              <Route path='/holdings' component={Holdings} />
+              <Route path='/holdings' component={HoldingsContainer} />
               <Route path='/sustainability' component={Sustainability} />
               <Route path='/investors' component={this.loginComponent} />
               <Route path='/news' component={News} />
-              {/* <Route exact path='/portal/:username' render={(props) => props.match.params.username === 'Miles' ? <Portal/> : <Redirect to='/investors' />} /> */}
               <Route exact path='/portal/:username' render={(props) => <Portal loggedInUser={this.state.user} />} />
             </main>
             <Footer />
           </>
-        // </Router>
       )
   }
 }
