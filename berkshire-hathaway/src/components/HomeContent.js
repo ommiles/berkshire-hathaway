@@ -2,16 +2,8 @@ import React from 'react';
 
 export default function HomeContainer() {
 
-    var currentdate = new Date(); 
-    var datetime = currentdate.getDate() + "/"
-                    + (currentdate.getMonth()+1)  + "/" 
-                    + currentdate.getFullYear() + " @ "  
-                    + currentdate.getHours() + ":"  
-                    + currentdate.getMinutes()
-
     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];;
     var date = new Date();
-
 
     return(
         <main className="w-100 cf helvetica dark-gray bg-white center">
