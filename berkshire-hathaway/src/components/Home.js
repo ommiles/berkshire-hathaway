@@ -33,7 +33,7 @@ export default function Home() {
                 </div>
             </div>
             
-            <div className='pa3 pa4-m pa5-l mw9'>
+            <div className='pa3 pa4-m pa5-l mw9 center'>
                 <div className='center f1 tc pb5'>
                     <h3 className="">Do you know what could beat the exciting feling of having a new computer?  Make your own PC!</h3>
                 </div>

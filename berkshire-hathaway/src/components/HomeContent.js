@@ -2,6 +2,17 @@ import React from 'react';
 
 export default function HomeContainer() {
 
+    var currentdate = new Date(); 
+    var datetime = currentdate.getDate() + "/"
+                    + (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() + " @ "  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes()
+
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];;
+    var date = new Date();
+
+
     return(
         <main className="w-100 cf helvetica dark-gray bg-white center">
             <div className="fl w-50 pr2 pr3-l mb3 mb4-l">
@@ -18,14 +29,10 @@ export default function HomeContainer() {
             </div>
             <div className="fl w-100 w-50-l pr2-l pl2-ns mb4 mb0-l mb4 outline">
             <div className="pa4">
-                <h1 className="f4 f2-l fw7 mt0 pv3-l bb-l bb--black">#004</h1>
+                <h1 className="f4 f2-l fw7 mt0 pt3-l pb4-l bb-l bb--black">{months[date.getMonth()] + ' ' + new Date().getDate() + ', ' + date.getFullYear()}</h1>
                 <p className="lh-copy mt2 mt3-m mt5-l f6">
-                <span className="db-ns f6 fw7 lh-solid mb3 mb0-m mb4-l">Mies, my great mentor said:</span> 
-                <span className="fw9 f6 f1-l db lh-title mb3 mb4-l">“God is in the details.”</span>
-                <span className="db-l measure-wide">
-                That is the essence of syntax: the discipline
-                that controls the proper use of grammar in the construction of phrases and the articulation of a language, Design. The syntax of design is provided by many components in the nature of the project.
-                </span>
+                <span className="db-ns f6 fw7 lh-solid mb3 mb0-m mb4-l">Today's headline:</span> 
+                <span className="fw9 f6 f1-l db lh-title mb3 mb4-l">“Berkshire Hathaway nearing the maximum stock price of $429,496 allowed on the Nasdaq.”</span>
                 </p>
             </div>
             </div>
